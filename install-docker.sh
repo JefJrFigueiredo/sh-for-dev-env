@@ -41,12 +41,4 @@ echo "Adicionando seu usuário no grupo docker"
 sudo usermod -aG docker $USER
 
 sudo echo
-echo "Shutting down WSL in 3"
-sleep 1
-echo "Shutting down WSL in 2"
-sleep 1
-echo "Shutting down WSL in 1"
-sleep 1
-echo "Shutting down WSL in 0"
-sleep 1
-sudo shutdown
+echo "Reboot your system for the changes to take effect"
