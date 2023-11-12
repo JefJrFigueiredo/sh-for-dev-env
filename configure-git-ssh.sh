@@ -39,13 +39,13 @@ email_correct='n';
 	  
   echo
   echo "What is your first name and last name?"
-	  read $name
+	  read name;
 	  git config --global user.name "$name"
 	done
 
 	  echo
-  	  echo "Creating a new SSH key, using the given e-mail. (
-Just press Enter to keep the default file name and choose a password.)"
+  	  echo "Creating a new SSH key, using the given e-mail. 
+	  (Just press Enter to keep the default file name and choose a password.)"
   	  ssh-keygen -t ed25519 -C "$email"
 	  
   echo
