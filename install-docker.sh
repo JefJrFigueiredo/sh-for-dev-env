@@ -29,15 +29,15 @@ echo "Verify that the Docker Engine installation is successful by running the he
 sudo docker run hello-world
 
 echo
-echo "Passos de pós-instalação para Linux"
+echo "Post-installation steps for Linux"
 echo " Gerenciando Docker como usuário não-root"
 
 echo
-echo "Criando o grupo docker"
+echo "Creating docker group"
 sudo groupadd docker
 
 echo
-echo "Adicionando seu usuário no grupo docker"
+echo "Adding your user to the docker group"
 sudo usermod -aG docker $USER
 
 sudo echo
