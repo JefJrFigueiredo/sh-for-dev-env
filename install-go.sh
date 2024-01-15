@@ -15,7 +15,9 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go$go_version.linux-amd
 
 echo
 echo "Add /usr/local/go/bin to the PATH environment variable"
-export PATH=$PATH:/usr/local/go/bin
+# Source: https://www.oreilly.com/library/view/learning-go/9781492077206/ch01.html
+echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.profile
+source $HOME/.profile
 
 echo
 echo "Verify that you've installed Go"
