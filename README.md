@@ -1,6 +1,6 @@
 # sh-for-dev-env
 
-Shell Script to automatize Github SSH and Docker instalation for Linux and WSL2 systems.
+Shell Script to automatize Github SSH and Docker instalation for Ubuntu 22.04 and WSL2 systems.
 
 ## Instructions
 Open the WSL2 Terminal and type the following commands to download and execute the installation scripts.
