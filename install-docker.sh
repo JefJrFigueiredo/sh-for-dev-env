@@ -41,4 +41,4 @@ echo "Adding your user to the docker group"
 sudo usermod -aG docker $USER
 
 echo
-echo "Reboot your system for the changes to take effect"
+echo "Exit the WSL and reopen for the changes to take effect"
