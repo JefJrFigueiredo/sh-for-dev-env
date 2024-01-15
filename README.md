@@ -16,19 +16,19 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-docker.sh && \
   rm install-docker.sh
 ~~~
-- (optional) Install Go
+- (optional) Install Go (approximately 15s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-go.sh && \
   bash install-go.sh && \
   rm install-go.sh
 ~~~
-- (optional) Install PHP, Composer and NVM
+- (optional) Install PHP, Composer and NVM (approximately 1m40s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-php-composer-nvm.sh && \
   bash install-php-composer-nvm.sh && \
   rm install-php-composer-nvm.sh
 ~~~
-- (optional) Install Python
+- (optional) Install Python (approximately 40s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-python.sh && \
   bash install-python.sh && \
