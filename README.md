@@ -22,7 +22,7 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-go.sh && \
   rm install-go.sh
 ~~~
-- Install PHP, Composer and NVM (approximately 1m40s)
+- Install PHP 8.3, Composer and NVM (approximately 1m40s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-php-composer-nvm.sh && \
   bash install-php-composer-nvm.sh && \
