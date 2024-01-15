@@ -40,5 +40,5 @@ echo
 echo "Adding your user to the docker group"
 sudo usermod -aG docker $USER
 
-sudo echo
+echo
 echo "Reboot your system for the changes to take effect"

@@ -22,3 +22,9 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-python.sh && \
   rm install-python.sh
 ~~~
+- (optional) Install Go
+~~~shell
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-go.sh && \
+  bash install-go.sh && \
+  rm install-go.sh
+~~~
