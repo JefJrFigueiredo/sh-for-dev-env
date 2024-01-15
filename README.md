@@ -10,9 +10,15 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/confi
   bash configure-git-ssh.sh && \
   rm configure-git-ssh.sh
 ~~~
-- Install Docker
+- (optional) Install Docker
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-docker.sh && \
   bash install-docker.sh && \
   rm install-docker.sh
+~~~
+- (optional) Install Python
+~~~shell
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-python.sh && \
+  bash install-python.sh && \
+  rm install-python.sh
 ~~~
