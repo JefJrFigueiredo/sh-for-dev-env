@@ -36,12 +36,12 @@ email_correct='n';
 	  echo
   echo "Your e-mail is $email. Is it right? (y/n)"
   	  read email_correct;
+     	done
 	  
   echo
   echo "What is your first name and last name?"
 	  read name;
 	  git config --global user.name "$name"
-	done
 
 	  echo
   	  echo "Creating a new SSH key, using the given e-mail. 
