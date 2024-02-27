@@ -19,7 +19,7 @@ echo "deb https://apt.bell-sw.com/ stable main" | sudo tee /etc/apt/sources.list
 echo 
 echo "Update repositories and install packages."
 sudo apt-get update
-sudo apt-get install bellsoft-java17
+sudo apt-get install -y bellsoft-java17
 
 echo 
 echo "Verifying your installation"
