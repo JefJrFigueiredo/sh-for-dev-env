@@ -26,3 +26,6 @@ go version
 echo
 echo "Removing installation package"
 rm go$go_version.linux-amd64.tar.gz
+
+echo
+echo "Exit and reopen WSL for the changes to have effect"
