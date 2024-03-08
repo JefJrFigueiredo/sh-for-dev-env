@@ -41,5 +41,7 @@ sudo usermod -aG docker $USER
 
 echo
 echo "Verify that you can run docker commands without sudo."
+echo
 echo "> > > docker run hello-world < < <"
+echo
 echo "Exit the WSL and reopen for the changes to take effect"
