@@ -30,7 +30,6 @@ sudo docker run hello-world
 
 echo
 echo "Post-installation steps for Linux"
-echo " Gerenciando Docker como usuário não-root"
 
 echo
 echo "Creating docker group"
@@ -41,4 +40,6 @@ echo "Adding your user to the docker group"
 sudo usermod -aG docker $USER
 
 echo
+echo "Verify that you can run docker commands without sudo."
+echo "> > > docker run hello-world < < <"
 echo "Exit the WSL and reopen for the changes to take effect"
