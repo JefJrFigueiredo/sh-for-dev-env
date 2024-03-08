@@ -30,9 +30,9 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
 ~~~
 - Install PHP 8.3, Composer and NVM (approximately 1m40s)
 ~~~shell
-wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-php-composer-nvm.sh && \
-  bash install-php-composer-nvm.sh && \
-  rm install-php-composer-nvm.sh
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-php8.3-composer-nvm.sh && \
+  bash install-php8.3-composer-nvm.sh && \
+  rm install-php8.3-composer-nvm.sh
 ~~~
 - Install Python (approximately 40s)
 ~~~shell
