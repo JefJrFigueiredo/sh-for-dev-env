@@ -70,3 +70,4 @@ do
 	echo
 	echo "Do you need to repeat the process of adding the SSH key on github with the instruction above? (y/n)"
 	read configure_ssh;
+done
