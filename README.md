@@ -28,6 +28,12 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-java17-spring-boot.sh && \
   rm install-java17-spring-boot.sh
 ~~~
+- Install Nvidia Container Toolkit (approximately 5m)
+~~~shell
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-nvidia-container-toolkit.sh && \
+  bash install-nvidia-container-toolkit.sh && \
+  rm install-nvidia-container-toolkit.sh
+~~~
 - Install PHP 8.3, Composer and NVM (approximately 1m40s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-php8.3-composer-nvm.sh && \
