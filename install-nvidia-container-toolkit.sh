@@ -20,28 +20,6 @@ echo "3. Install the NVIDIA Container Toolkit packages:"
 sudo apt-get install -y nvidia-container-toolkit
 
 echo
-echo "Configuring Docker"
-echo "1. Configure the container runtime by using the nvidia-ctk command:"
-sudo nvidia-ctk runtime configure --runtime=docker
-
-echo
-echo "2. Restart the Docker daemon:"
-sudo systemctl restart docker
-
-echo
-echo "Rootless mode"
-echo "1. Configure the container runtime by using the nvidia-ctk command:"
-nvidia-ctk runtime configure --runtime=docker --config=$HOME/.config/docker/daemon.json
-
-echo
-echo "2. Restart the Rootless Docker daemon:"
-systemctl --user restart docker
-
-echo
-echo "3. Configure /etc/nvidia-container-runtime/config.toml by using the sudo nvidia-ctk command:"
-sudo nvidia-ctk config --set nvidia-container-cli.no-cgroups --in-place
-
-echo
 echo "Install NVIDIA GPU Driver for WSL2-Ubuntu"
 echo "Source: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/"
 
