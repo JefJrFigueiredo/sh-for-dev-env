@@ -7,3 +7,6 @@ echo "Source: https://brew.sh/"
 
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$USER/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+echo
+echo "Close and reopen the terminal to finish the installation of Homebrew"
