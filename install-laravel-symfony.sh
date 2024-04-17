@@ -66,6 +66,11 @@ echo "# Show the Composer version"
 echo
 composer -V
 
+echo
+echo "Installing Symfony"
+curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
+sudo apt install symfony-cli
+
 #Command to check the latest version of NVM
 nvm_version=$(wget -qO- https://github.com/nvm-sh/nvm/releases/latest | grep -o 'v[0-9.]\+' | head -n 1)
 
