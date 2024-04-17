@@ -66,10 +66,13 @@ echo "# Show the Composer version"
 echo
 composer -V
 
+#Command to check the latest version of NVM
+nvm_version=$(wget -qO- https://github.com/nvm-sh/nvm/releases/latest | grep -o 'v[0-9.]\+' | head -n 1)
+
 echo
-echo "# Installing NVM v0.39.5"
+echo "# Installing NVM $nvm_version"
 echo "Source: https://github.com/nvm-sh/nvm#installing-and-updating"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$nvm_version/install.sh | bash
 
 echo
 echo "Close and reopen the terminal for the changes to have effect."
