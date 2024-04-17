@@ -80,4 +80,4 @@ echo "Source: https://github.com/nvm-sh/nvm#installing-and-updating"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$nvm_version/install.sh | bash
 
 echo
-echo "Close and reopen the terminal for the changes to have effect."
+echo "Close and reopen the terminal to finish the installation of NVM"
