@@ -16,6 +16,12 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-docker.sh && \
   rm install-docker.sh
 ~~~
+- Install AWS Elastic Beanstalk
+~~~shell
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-aws-eb.sh && \
+  bash install-aws-eb.sh && \
+  rm install-aws-eb.sh
+~~~
 - Install Go (approximately 15s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-go.sh && \
@@ -34,7 +40,7 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-nvidia-container-toolkit.sh && \
   rm install-nvidia-container-toolkit.sh
 ~~~
-- Install PHP 8.3, Composer and NVM (approximately 1m40s)
+- Install PHP 8.3, Composer, Laravel and Symfony NVM (approximately 1m40s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-laravel-symfony.sh && \
   bash install-laravel-symfony.sh && \
