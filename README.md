@@ -16,11 +16,11 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-docker.sh && \
   rm install-docker.sh
 ~~~
-- Install AWS Elastic Beanstalk
+- Install Homebrew
 ~~~shell
-wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-aws-eb.sh && \
-  bash install-aws-eb.sh && \
-  rm install-aws-eb.sh
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-homebrew.sh && \
+  bash install-homebrew.sh && \
+  rm install-homebrew.sh
 ~~~
 - Install Go (approximately 15s)
 ~~~shell
