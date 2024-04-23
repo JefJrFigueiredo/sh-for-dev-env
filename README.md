@@ -46,6 +46,12 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-laravel-symfony.sh && \
   rm install-laravel-symfony.sh
 ~~~
+- Install MongoDB
+~~~shell
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-mongodb.sh && \
+  bash install-mongodb.sh && \
+  rm install-mongodb.sh
+~~~
 - Install Python (approximately 40s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-python.sh && \
