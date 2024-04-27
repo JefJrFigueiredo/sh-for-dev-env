@@ -22,6 +22,12 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-homebrew.sh && \
   rm install-homebrew.sh
 ~~~
+- Install Google Cloud CLI
+~~~shell
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-gcloud-cli.sh && \
+  bash install-gcloud-cli.sh && \
+  rm install-gcloud-cli.sh
+~~~
 - Install Go (approximately 15s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-go.sh && \
