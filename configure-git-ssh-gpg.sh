@@ -71,7 +71,7 @@ echo "Source: https://docs.github.com/en/github/authenticating-to-github/managin
 
 gpg --default-new-key-algo rsa4096 --gen-key
 
-gpg_key = $(gpg --list-secret-keys --keyid-format=long | grep 'sec' | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p')
+gpg_key=$(gpg --list-secret-keys --keyid-format=long | grep 'sec' | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p')
 
 git config --global user.signingkey $gpg_key
 
