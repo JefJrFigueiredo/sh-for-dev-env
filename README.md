@@ -16,12 +16,6 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-docker.sh && \
   rm install-docker.sh*
 ~~~
-- Install Homebrew
-~~~shell
-wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-homebrew.sh && \
-  bash install-homebrew.sh && \
-  rm install-homebrew.sh*
-~~~
 - Install Google Cloud CLI
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-gcloud-cli.sh && \
