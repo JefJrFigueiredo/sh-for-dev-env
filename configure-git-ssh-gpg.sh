@@ -68,7 +68,7 @@ echo "xclip -sel clip < ~/.ssh/id_ed25519.pub"
 echo
 
 read -n 1 -s -r -p "After doing the instruction above, press any key to continue..."
-
+echo
 echo
 echo "Beginning the GPG signing configuration"
 echo "Source: https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key"
