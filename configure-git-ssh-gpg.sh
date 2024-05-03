@@ -67,6 +67,8 @@ echo
 echo "xclip -sel clip < ~/.ssh/id_ed25519.pub"
 echo
 
+read -n 1 -s -r -p "After doing the instruction above, press any key to continue..."
+
 echo "Beginning the GPG signing configuration"
 echo "Source: https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key"
 
@@ -75,6 +77,8 @@ gpg --default-new-key-algo rsa4096 --gen-key
 gpg_key=$(gpg --list-secret-keys --keyid-format=long | grep 'sec' | tail -n 1 | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p')
 
 git config --global user.signingkey $gpg_key
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
 
 gpg --armor --export $gpg_key | xclip -sel clip
 
@@ -90,7 +94,3 @@ echo "gpg --list-secret-keys --keyid-format=long | grep 'sec' | tail -n 1 | sed 
 echo
 
 echo 'export GPG_TTY=$(tty)' >> ~/.bashrc
-
-git config --global commit.gpgsign true
-
-git config --global tag.gpgsign true
