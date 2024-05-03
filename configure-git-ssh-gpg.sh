@@ -85,7 +85,7 @@ git config --global tag.gpgsign true
 gpg --armor --export $gpg_key | xclip -sel clip
 
 echo
-echo "Browse to"
+echo "Browse to "
 echo
 echo "> > > https://github.com/settings/gpg/new < < <"
 echo 
