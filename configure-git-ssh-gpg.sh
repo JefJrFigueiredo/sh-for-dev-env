@@ -53,7 +53,7 @@ ssh-add ~/.ssh/id_ed25519
 
 echo
 echo "Copying the content of the file id_rsa.pub to your clipboard"
-sudo apt-get install -y -f xclip
+sudo apt-get install -y xclip
 xclip -sel clip < ~/.ssh/id_ed25519.pub
 
 echo
@@ -69,6 +69,7 @@ echo
 
 read -n 1 -s -r -p "After doing the instruction above, press any key to continue..."
 
+echo
 echo "Beginning the GPG signing configuration"
 echo "Source: https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key"
 
@@ -93,4 +94,7 @@ echo
 echo "gpg --list-secret-keys --keyid-format=long | grep 'sec' | tail -n 1 | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p' | gpg --armor --export | xclip -sel clip"
 echo
 
-echo 'export GPG_TTY=$(tty)' >> ~/.bashrc
+[ -f ~/.bashrc ] && echo -e '\nexport GPG_TTY=$(tty)' >> ~/.bashrc
+
+echo "use-agent" >> ~/.gnupg/gpg.conf
+gpgconf --launch gpg-agent
