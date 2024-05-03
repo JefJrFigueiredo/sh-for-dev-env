@@ -9,7 +9,6 @@ do
 	echo
 	echo "What is your github e-mail?"
 	read email;
-	export email
 	git config --global user.email "$email"
 	
 	echo
@@ -23,7 +22,6 @@ do
 	echo
 	echo "What is your first name and last name?"
 	read name;
-	export name
 	git config --global user.name "$name"
 	
 	echo
@@ -76,20 +74,7 @@ echo "Beginning the GPG signing configuration"
 echo "Source: https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key"
 echo
 
-echo
-echo "Installing expect to fill the personal data in the GPG key creation:"
-sudo apt-get -y install expect
-
-expect <<'EOF'
-spawn gpg --default-new-key-algo rsa4096 --gen-key
-expect "Real name: "
-send -- "$env(name)\n"
-expect "Email address: "
-send -- "$env(email)\n"
-expect "Change (N)ame, (E)mail, or (O)kay/(Q)uit? "
-send -- "o\n"
-expect eof
-EOF
+gpg --default-new-key-algo rsa4096 --gen-key
 
 gpg_key=$(gpg --list-secret-keys --keyid-format=long | grep 'sec' | tail -n 1 | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p')
 
