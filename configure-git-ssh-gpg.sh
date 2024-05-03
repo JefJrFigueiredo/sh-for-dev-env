@@ -97,5 +97,6 @@ echo
 
 [ -f ~/.bashrc ] && echo -e '\nexport GPG_TTY=$(tty)' >> ~/.bashrc
 
-echo "use-agent" >> ~/.gnupg/gpg.conf
+echo "\nuse-agent" >> ~/.gnupg/gpg.conf
+echo "\npinentry-mode loopback" >> ~/.gnupg/gpg.conf
 gpgconf --launch gpg-agent
