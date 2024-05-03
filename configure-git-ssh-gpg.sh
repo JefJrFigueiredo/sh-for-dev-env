@@ -64,9 +64,7 @@ echo
 echo "and paste with Ctrl+V on the field 'Key', choose a title and click on 'Add SSH key'."
 echo "If you lose your clipboard content, you can copy the key again with the following command:"
 echo
-echo "v v v"
 echo "xclip -sel clip < ~/.ssh/id_ed25519.pub"
-echo "^ ^ ^"
 echo
 
 echo "Beginning the GPG signing configuration"
