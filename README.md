@@ -4,7 +4,7 @@ Shell Script to automatize Github SSH, Docker and programming languages packages
 
 ## Instructions
 Open the WSL2 Terminal and type the following commands to download and execute the installation scripts.
-- Configure Github SSH (approximately 60s)
+- Configure Github SSH and GPG (approximately 60s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/configure-git-ssh-gpg.sh && \
   bash configure-git-ssh-gpg.sh && \
