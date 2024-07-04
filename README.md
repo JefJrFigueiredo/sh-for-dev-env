@@ -28,6 +28,12 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-go.sh && \
   rm install-go.sh*
 ~~~
+- Install Hugo
+~~~shell
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-hugo.sh && \
+  bash install-hugo.sh && \
+  rm install-hugo.sh*
+~~~
 - Install Java 17 (approximately 35s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-java17-spring-boot.sh && \
