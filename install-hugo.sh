@@ -10,3 +10,5 @@ sudo snap install hugo
 
 echo "Install useful VSCode extensions"
 eval $(curl -s https://gohugo.io/tools/editors/ | grep -oP '(?<=itemName=)[^"]*' | awk '{print "code --install-extension " $0 " &&"}' | sed '$ s/&&$//')
+
+echo "Go to https://gohugo.io/getting-started/quick-start/ to continue."
