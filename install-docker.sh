@@ -39,7 +39,7 @@ echo
 echo "Adding your user to the docker group"
 sudo usermod -aG docker $USER
 
-docker run hello-world | xclip -sel clip
+echo "docker run hello-world" | xclip -sel clip
 
 echo
 echo "Press Ctrl+V to run the command ''docker run hello-world'' and see if you can run docker commands without sudo."
