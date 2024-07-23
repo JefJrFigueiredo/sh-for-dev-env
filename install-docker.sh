@@ -39,9 +39,9 @@ echo
 echo "Adding your user to the docker group"
 sudo usermod -aG docker $USER
 
+docker run hello-world | xclip -sel clip
+
 echo
-echo "Verify that you can run docker commands without sudo."
+echo "Press Ctrl+V to run the command ''docker run hello-world'' and see if you can run docker commands without sudo."
 echo
-echo "> > > docker run hello-world < < <"
-echo
-echo "Exit the WSL and reopen for the changes to take effect"
+echo "Then, exit the WSL and reopen for the changes to take effect"
