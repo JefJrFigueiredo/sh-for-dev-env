@@ -76,7 +76,7 @@ echo
 
 gpg --default-new-key-algo rsa4096 --gen-key
 
-gpg_key=$(gpg --list-secret-keys --keyid-format=long | grep 'sec' | tail -n 1 | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p')
+gpg_key=$(gpg --list-secret-keys --keyid-format=long 2>/dev/null | grep 'sec' | tail -n 1 | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p')
 
 git config --global user.signingkey $gpg_key
 git config --global commit.gpgsign true
