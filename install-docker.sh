@@ -6,17 +6,17 @@ for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do
 
 echo
 echo "Add Docker's official GPG key:"
-sudo apt-get -y update
-sudo apt-get -y install ca-certificates curl gnupg
-sudo -y install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 echo
 echo "Add the repository to Apt sources:"
 echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get -y update
 
@@ -39,9 +39,9 @@ echo
 echo "Adding your user to the docker group"
 sudo usermod -aG docker $USER
 
-echo "docker run hello-world" | xclip -sel clip
+echo
+echo "Activating changes to groups"
+newgrp docker
 
-echo
-echo "Press Ctrl+V to run the command ''docker run hello-world'' and see if you can run docker commands without sudo."
-echo
-echo "Then, exit the WSL and reopen for the changes to take effect"
+echo "Trying to run Docker without sudo"
+docker run hello-world
