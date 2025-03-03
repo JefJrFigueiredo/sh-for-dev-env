@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-echo "Script for installing kubectl, Terraform, Helm and AWS CLI on Ubuntu"
+echo "Script for installing kubectl, Terraform, OpenTofu, Helm and AWS CLI on Ubuntu"
 
 echo
 echo "Install kubectl on Linux"
@@ -40,6 +40,19 @@ sudo apt update && sudo apt install -y terraform
 echo
 echo "Verify Terraform installation"
 terraform -version
+
+echo
+echo "Installing OpenTofu"
+echo "Source: https://opentofu.org/docs/intro/install/snap/"
+snap install --classic opentofu
+alias opentofu='/snap/bin/opentofu.tofu'
+if [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
+fi
+if [ -f "$HOME/.zshrc" ]; then
+    source "$HOME/.zshrc"
+fi
+opentofu -version
 
 echo
 echo "Install Helm on Debian/Ubuntu"
