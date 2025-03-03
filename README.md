@@ -10,11 +10,11 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/confi
   bash configure-git-ssh-gpg.sh && \
   rm configure-git-ssh-gpg.sh*
 ~~~
-- Install AWS CLI, kubectl, Terraform and Helm
+- Install AWS CLI, kubectl, Terraform, OpenTofu and Helm
 ~~~shell
-wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install_aws_cli_kubectl_terraform_helm.sh && \
-  bash install_aws_cli_kubectl_terraform_helm.sh && \
-  rm install_aws_cli_kubectl_terraform_helm.sh*
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install_aws_cli_kubectl_terraform_opentofu_helm.sh && \
+  bash install_aws_cli_kubectl_terraform_opentofu_helm.sh && \
+  rm install_aws_cli_kubectl_terraform_opentofu_helm.sh*
 ~~~
 - Install Docker (approximately 40s)
 ~~~shell
