@@ -135,3 +135,6 @@ helm version
 echo
 echo "Verify AWS CLI installation"
 aws --version
+echo
+echo "Verify OpenTofu installation"
+opentofu -version
