@@ -130,11 +130,11 @@ echo
 echo "Verify Terraform installation"
 terraform -version
 echo
+echo "Verify OpenTofu installation"
+opentofu -version
+echo
 echo "Verify Helm installation"
 helm version
 echo
 echo "Verify AWS CLI installation"
 aws --version
-echo
-echo "Verify OpenTofu installation"
-opentofu -version
