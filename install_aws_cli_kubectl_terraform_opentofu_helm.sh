@@ -46,14 +46,14 @@ echo "Installing OpenTofu"
 echo "Source: https://opentofu.org/docs/intro/install/snap/"
 snap install --classic opentofu
 if [ -f "$HOME/.bashrc" ]; then
-    echo "alias opentofu='/snap/bin/opentofu.tofu'" >> ~/.bashrc
+    echo "alias tofu='/snap/bin/opentofu.tofu'" >> ~/.bashrc
     source "$HOME/.bashrc"
 fi
 if [ -f "$HOME/.zshrc" ]; then
-    echo "alias opentofu='/snap/bin/opentofu.tofu'" >> ~/.zshrc
+    echo "alias tofu='/snap/bin/opentofu.tofu'" >> ~/.zshrc
     source "$HOME/.zshrc"
 fi
-opentofu -version
+tofu -version
 
 echo
 echo "Install Helm on Debian/Ubuntu"
@@ -131,7 +131,7 @@ echo "Verify Terraform installation"
 terraform -version
 echo
 echo "Verify OpenTofu installation"
-opentofu -version
+tofu -version
 echo
 echo "Verify Helm installation"
 helm version
