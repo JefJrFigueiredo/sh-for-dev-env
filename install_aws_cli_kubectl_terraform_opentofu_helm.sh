@@ -45,11 +45,12 @@ echo
 echo "Installing OpenTofu"
 echo "Source: https://opentofu.org/docs/intro/install/snap/"
 snap install --classic opentofu
-alias opentofu='/snap/bin/opentofu.tofu'
 if [ -f "$HOME/.bashrc" ]; then
+    echo "alias opentofu='/snap/bin/opentofu.tofu'" >> ~/.bashrc
     source "$HOME/.bashrc"
 fi
 if [ -f "$HOME/.zshrc" ]; then
+    echo "alias opentofu='/snap/bin/opentofu.tofu'" >> ~/.zshrc
     source "$HOME/.zshrc"
 fi
 opentofu -version
