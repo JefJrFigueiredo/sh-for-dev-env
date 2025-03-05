@@ -92,7 +92,7 @@ echo "Remove the downloaded files"
 rm awscliv2.zip
 
 echo
-echo "At this moment, you should already have an AIM user. If you don't have one, follow the steps below:"
+echo "At this moment, you should already have an IAM user. If you don't have one, follow the steps below:"
 echo "Go to the AWS Console: https://aws.amazon.com/ and sign in"
 echo "Search for the IAM service"
 echo "> Create user"
