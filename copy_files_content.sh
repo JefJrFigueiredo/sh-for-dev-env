@@ -11,13 +11,12 @@ for item in "$@"; do
     done < <(find "$item" -type f)
   elif [ -f "$item" ]; then
     # If the argument is a file, just process it directly
-    output+="\n*\nFile: $item\n*\n\n"
+    output+="\n#\n# File: $item\n#\n\n"
     output+="$(cat "$item")\n"
   else
     output+="$item is not a valid file or directory.\n"
   fi
 done
 
-# Copy to clipboard using xclip
 echo -e "$output" | xclip -sel clip
 echo "Copied to clipboard!"
