@@ -70,3 +70,16 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-python.sh && \
   rm install-python.sh*
 ~~~
+- Script to copy files content
+~~~shell
+# Install xclip
+sudo apt-get update && sudo apt-get install -y xclip
+# Download the script from GitHub
+wget -O ~/copy_files_content.sh https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/copy_files_content.sh && \
+# Define the alias command
+alias_cmd="alias copy='bash ~/copy_files_content.sh'"
+# Add alias to .bashrc if not already present
+{ grep -qxF "$alias_cmd" ~/.bashrc || echo "$alias_cmd" >> ~/.bashrc && source ~/.bashrc; } && \
+# If ~/.zshrc exists, also add alias there if not already present
+[ -f ~/.zshrc ] && { grep -qxF "$alias_cmd" ~/.zshrc || echo "$alias_cmd" >> ~/.zshrc && source ~/.zshrc; }
+~~~
