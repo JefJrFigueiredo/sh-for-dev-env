@@ -72,7 +72,7 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
 ~~~
 - Create new Dockerized Laravel Project
 
-Run this:
+Run this (once):
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/laravel-mysql-docker-hello-world.sh && \
 chmod +x laravel-mysql-docker-hello-world.sh && \
