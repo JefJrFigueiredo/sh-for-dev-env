@@ -70,6 +70,20 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-python.sh && \
   rm install-python.sh*
 ~~~
+- Create new Dockerized Laravel Project
+
+Run this:
+~~~shell
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/laravel-mysql-docker-hello-world.sh && \
+chmod +x laravel-mysql-docker-hello-world.sh && \
+echo "alias newlaravel='~/laravel-mysql-docker-hello-world.sh'" >> ~/.bashrc && \
+source ~/.bashrc
+~~~
+Then, run this (for every new project):
+~~~shell
+newlaravel name-of-your-new-project
+~~~
+
 - Script to copy files content
 ~~~shell
 # Install xclip
