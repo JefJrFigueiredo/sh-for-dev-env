@@ -30,6 +30,9 @@ docker run --rm \
 
 # Start Sail and run migration
 cd "$proj_name" || exit 1
+cd docker
+rm -rf 8.0 8.1 8.2 8.3 mariadb pgsql
+cd ..
 ./vendor/bin/sail up -d
 echo "Waiting 15 seconds for MySQL to be ready to run ./vendor/bin/sail artisan migrate"
 sleep 15
