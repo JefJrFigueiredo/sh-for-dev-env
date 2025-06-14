@@ -70,7 +70,7 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-python.sh && \
   rm install-python.sh*
 ~~~
-- Create new Dockerized Laravel Project
+- Create new Dockerized Laravel Project (requires only Docker)
 
 Run this (once):
 ~~~shell
