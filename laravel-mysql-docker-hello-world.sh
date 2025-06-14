@@ -28,7 +28,7 @@ docker run --rm \
     php artisan sail:publish \
   "
 
-# Start Sail and run migration
+# Remove unwanted Docker files, start containers and run migration
 cd "$proj_name" || exit 1
 cd docker
 rm -rf 8.0 8.1 8.2 8.3 mariadb pgsql
