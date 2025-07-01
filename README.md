@@ -74,9 +74,9 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
 
 Run this (once):
 ~~~shell
-wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/laravel-mysql-docker-hello-world.sh && \
-chmod +x laravel-mysql-docker-hello-world.sh && \
-echo "alias newlaravel='~/laravel-mysql-docker-hello-world.sh'" >> ~/.bashrc && \
+wget -O ~/new_laravel.sh https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/laravel-mysql-docker-hello-world.sh && \
+chmod +x ~/new_laravel.sh && \
+echo "alias newlaravel='~/new_laravel.sh'" >> ~/.bashrc && \
 source ~/.bashrc
 ~~~
 Then, run this (for every new project):
