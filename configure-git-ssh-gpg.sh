@@ -3,6 +3,14 @@
 echo
 echo "Connecting to Github via SSH"
 
+echo
+echo "Update the apt package index"
+sudo apt-get -y update
+
+echo
+echo "Installing Git"
+sudo apt -y install git
+
 email_correct='n';
 while [ $email_correct == 'n' ];
 do
@@ -28,14 +36,6 @@ do
 	echo "Your name is $name. Is it right? (y/n)"
 	read name_correct;
 done
-
-echo
-echo "Update the apt package index"
-sudo apt-get -y update
-
-echo
-echo "Installing Git"
-sudo apt -y install git
 
 echo
 echo "Creating a new SSH key, using the given e-mail. 
