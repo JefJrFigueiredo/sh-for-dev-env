@@ -28,6 +28,12 @@ wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/insta
   bash install-gcloud-cli.sh && \
   rm install-gcloud-cli.sh*
 ~~~
+- Install Gemini CLI
+~~~shell
+wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-gemini-cli.sh && \
+  bash install-gemini-cli.sh && \
+  rm install-gemini-cli.sh*
+~~~
 - Install Go (approximately 15s)
 ~~~shell
 wget https://raw.githubusercontent.com/JefJrFigueiredo/sh-for-dev-env/main/install-go.sh && \
