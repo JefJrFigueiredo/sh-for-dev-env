@@ -44,7 +44,7 @@ terraform -version
 echo
 echo "Installing OpenTofu"
 echo "Source: https://opentofu.org/docs/intro/install/snap/"
-snap install --classic opentofu
+sudo snap install --classic opentofu
 if [ -f "$HOME/.bashrc" ]; then
     echo "alias tofu='/snap/bin/opentofu.tofu'" >> ~/.bashrc
     source "$HOME/.bashrc"
