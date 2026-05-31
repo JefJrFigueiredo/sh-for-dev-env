@@ -78,7 +78,15 @@ gpg --default-new-key-algo rsa4096 --gen-key
 
 echo
 echo "Reading the long form of your GPG key ID"
-gpg_key=$(gpg --list-secret-keys --keyid-format=long 2>/dev/null | grep '^sec' | tail -n 1 | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p')
+gpg_key=$(gpg --list-secret-keys --with-colons 2>/dev/null | awk -F: '/^sec:/ {print $5}' | tail -n 1)
+
+if [ -z "$gpg_key" ]; then
+	echo "ERROR: No GPG secret key found. Did the key generation complete?" >&2
+	echo "Re-run: gpg --default-new-key-algo rsa4096 --gen-key" >&2
+	exit 1
+fi
+
+echo "Using GPG key: $gpg_key"
 
 # Make sure Git uses the OpenPGP key (not an SSH key) for signing.
 git config --global --unset gpg.format 2>/dev/null
