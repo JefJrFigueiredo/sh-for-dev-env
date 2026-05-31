@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 echo
 echo "Connecting to Github via SSH"
@@ -76,13 +76,17 @@ echo
 
 gpg --default-new-key-algo rsa4096 --gen-key
 
-gpg_key=$(gpg --list-secret-keys --keyid-format=long 2>/dev/null | grep 'sec' | tail -n 1 | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p')
+echo
+echo "Reading the long form of your GPG key ID"
+gpg_key=$(gpg --list-secret-keys --keyid-format=long 2>/dev/null | grep '^sec' | tail -n 1 | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p')
 
-git config --global user.signingkey $gpg_key
+# Make sure Git uses the OpenPGP key (not an SSH key) for signing.
+git config --global --unset gpg.format 2>/dev/null
+git config --global user.signingkey "$gpg_key"
 git config --global commit.gpgsign true
-git config --global tag.gpgsign true
+git config --global tag.gpgSign true
 
-gpg --armor --export $gpg_key | xclip -sel clip
+gpg --armor --export "$gpg_key" | xclip -sel clip
 
 echo
 echo "Browse to"
@@ -92,11 +96,9 @@ echo
 echo "and paste with Ctrl+V on the field 'Key', choose a title and click on 'Add GPG key'."
 echo "If you lose your clipboard content, you can copy the key again with the following command:"
 echo
-echo "gpg --list-secret-keys --keyid-format=long | grep 'sec' | tail -n 1 | sed -n 's/.*\/\([^[:space:]]*\).*/\1/p' | gpg --armor --export | xclip -sel clip"
+echo "gpg --armor --export $gpg_key | xclip -sel clip"
 echo
 
+# Tell the shell about GPG so it can prompt for your passphrase (per GitHub docs).
 [ -f ~/.bashrc ] && echo -e '\nexport GPG_TTY=$(tty)' >> ~/.bashrc
-
-echo "\nuse-agent" >> ~/.gnupg/gpg.conf
-echo "\npinentry-mode loopback" >> ~/.gnupg/gpg.conf
-gpgconf --launch gpg-agent
+export GPG_TTY=$(tty)
